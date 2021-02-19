@@ -1,0 +1,58 @@
+.menuprincipal{
+    padding: 0px;
+    margin: 0px;
+}
+
+#SloganWhatsApp{
+    width: 50px;
+    height: 50px;
+    position:fixed;
+    bottom: 25px;
+    right: 25px;
+}
+
+.menuprincipal .navbar{
+    background: rgb(133, 131, 132); 
+    width: 1000px;
+    display: inline-block;
+}
+
+.menuprincipal .navbar .navslogan{
+    border-style: double;
+    width: 500px;
+    float: left;
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.menuprincipal .navbar .navslogan li{
+    /*border-style: solid;*/
+    list-style: none;
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 15px;
+}
+.menuprincipal .navbar .navslogan img{
+    /*border-style: solid;*/
+    list-style: none;
+    font-size: 20px;
+    display: inline-block;
+}
+
+
+
+.menuprincipal .navbar .listamenuprincipal{
+    border-style: double;
+    width: 400px;
+    display:inline-block;
+    float: right;
+}
+.menuprincipal .navbar .listamenuprincipal li{
+    /*border-style: solid;*/
+    list-style: none;
+    padding-left: 10px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
