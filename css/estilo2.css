@@ -1,4 +1,19 @@
-.menuprincipal{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menuprimario{
+    border-style: double;
+    width: 900px;
+    display: inline-block;
+}
+.menuprimario .web2 li{
+    display: inline-block;
+}
+
+.menusecundario{
     padding: 0px;
     margin: 0px;
 }
@@ -11,48 +26,87 @@
     right: 25px;
 }
 
-.menuprincipal .navbar{
+
+.menusecundario .navbar{
     background: rgb(133, 131, 132); 
-    width: 1000px;
-    display: inline-block;
+    width: 100%;
+    display: inline;
+    margin: 30px 30px;
+    border-style: solid;
 }
 
-.menuprincipal .navbar .navslogan{
+.menusecundario .navbar{
     border-style: double;
-    width: 500px;
-    float: left;
-    display: inline-block;
-    padding-left: 10px;
-}
-
-.menuprincipal .navbar .navslogan li{
-    /*border-style: solid;*/
-    list-style: none;
-    font-size: 20px;
-    display: inline-block;
+    width: 96%;
+    display: flex;
     padding-left: 15px;
 }
-.menuprincipal .navbar .navslogan img{
+
+.menusecundario .navbar img{
     /*border-style: solid;*/
     list-style: none;
     font-size: 20px;
     display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
 }
 
-
-
-.menuprincipal .navbar .listamenuprincipal{
+.menusecundario .navbar .listamenu{
     border-style: double;
-    width: 400px;
+    width: 100%;
     display:inline-block;
-    float: right;
+    padding-right: 10px;
+    margin: 30px;
 }
-.menuprincipal .navbar .listamenuprincipal li{
+
+.menusecundario .navbar .listamenu li{
     /*border-style: solid;*/
     list-style: none;
     padding-left: 10px;
     display: inline-block;
     font-size: 20px;
+    float: right;
+}
+
+/*====================
+========CARRUCEL======
+======================*/
+
+.carousel{
+    position: relative;
+}
+
+.carousel .inner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner::after{
+    display:block;
+    clear:both;
+    content:"";
+
+}
+
+.carousel-item{
+    position:relative;
+    display:none;
+    float:left;
+    width:900px;
+    margin-right:-100%;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    transition:transform .2s ease-in-out;
 }
 
 
+@media (prefers-reduced-motion:reduce){.carousel-item{transition:none}}
+
+.carousel-item-next,.carousel-item-prev,.carousel-item.active{display:block}
+
+
+.active.carousel-item-end,.carousel-item-next:not(.carousel-item-start){transform:translateX(100%)}
+
+.active.carousel-item-start,.carousel-item-prev:not(.carousel-item-end){transform:translateX(-100%)}
